@@ -1,0 +1,78 @@
+{
+	"hash": "d41d8cd98f00b204e9800998ecf8427e",
+	"updated": "2020-01-15T19:22:37.5481714-03:00",
+	"installedModules": {
+		"github.com/hashload/horse": {
+			"name": "horse",
+			"version": "v2.0.14",
+			"hash": "e4b2fc61cc0afa95eed7092fd70d4bed",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		},
+		"github.com/hashload/horse-cors": {
+			"name": "horse-cors",
+			"version": "1.0.3",
+			"hash": "248f37dd844f5a4c4ff78364e5a86027",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		},
+		"github.com/paolo-rossi/delphi-jose-jwt": {
+			"name": "delphi-jose-jwt",
+			"version": "v2.5.2",
+			"hash": "589e56e202f3acd41b4021314c54518c",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		},
+		"https://github.com/bittencourtthulio/simpleorm": {
+			"name": "simpleorm",
+			"version": "2.02.07",
+			"hash": "de54b8c3a1414b84c63668ac450533d6",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		},
+		"https://github.com/ezequieljuliano/datasetconverter4delphi": {
+			"name": "datasetconverter4delphi",
+			"version": "master",
+			"hash": "a617468366257886222696f101783ecc",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		},
+		"https://github.com/hashload/horse-jwt": {
+			"name": "horse-jwt",
+			"version": "1.2.5",
+			"hash": "f4341224a1eb2824536a3222ad038619",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		},
+		"https://github.com/hashload/jhonson": {
+			"name": "jhonson",
+			"version": "1.1.2",
+			"hash": "85d9b3c97b5144448440d7d26bdd16de",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		},
+		"https://github.com/paolo-rossi/delphi-jose-jwt": {
+			"name": "delphi-jose-jwt",
+			"version": "v2.5.2",
+			"hash": "589e56e202f3acd41b4021314c54518c",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		},
+		"https://github.com/viniciussanchez/bcrypt": {
+			"name": "bcrypt",
+			"version": "1.0.5",
+			"hash": "c3e5526f99c34f9eb0696838f74c0e0b",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		}
+	}
+}

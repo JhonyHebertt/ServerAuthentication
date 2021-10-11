@@ -27,8 +27,8 @@ begin
     THorse.StopListen;
   end;
 
-  App.Use(Jhonson);
   App.Use(CORS);
+  App.Use(Jhonson);
   //Controller de Entidades
   uUsuarios.Registry(App);
 

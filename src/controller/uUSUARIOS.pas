@@ -28,9 +28,6 @@ begin
   App.Post('/usuarios/auth', Auth);
   App.Get('/usuarios', Get);
   App.Get('/usuarios/:id', GetID);
-  App.Post('/usuarios', Insert);
-  App.Put('/usuarios/:id', Update);
-  App.Delete('/usuarios/:id', Delete);
 end;
 
 procedure Auth(Req: THorseRequest; Res: THorseResponse; Next: TProc);
@@ -68,19 +65,6 @@ begin
   end;
 end;
 
-procedure Insert(Req: THorseRequest; Res: THorseResponse; Next: TProc);
-var
-  FDAO : iDAOGeneric<TUSUARIO>;
-  LHash : String;
-  aJsonUser : TJsonObject;
-begin
-  FDAO := TDAOGeneric<TUSUARIO>.New;
-  aJsonUser := Req.Body<TJsonObject>;
-  LHash := TBCrypt.GenerateHash(aJsonUser.GetValue<String>('PASSWORD'));
-  aJsonUser.Get('PASSWORD').JsonValue := TJsonString.Create(LHash);
-  Res.Send<TJSONObject>(FDAO.Insert(aJsonUser));
-end;
-
 procedure GetID(Req: THorseRequest; Res: THorseResponse; Next: TProc);
 var
   FDAO : iDAOGeneric<TUSUARIO>;
@@ -95,22 +79,6 @@ var
 begin
   FDAO := TDAOGeneric<TUSUARIO>.New;
   Res.Send<TJsonArray>(FDAO.Find);
-end;
-
-procedure Update(Req: THorseRequest; Res: THorseResponse; Next: TProc);
-var
-  FDAO : iDAOGeneric<TUSUARIO>;
-begin
-  FDAO := TDAOGeneric<TUSUARIO>.New;
-  Res.Send<TJsonObject>(FDAO.Update(Req.Body<TJsonObject>));
-end;
-
-procedure Delete(Req: THorseRequest; Res: THorseResponse; Next: TProc);
-var
-  FDAO : iDAOGeneric<TUSUARIO>;
-begin
-  FDAO := TDAOGeneric<TUSUARIO>.New;
-  Res.Send<TJsonObject>(FDAO.Delete('ID', Req.Params.Items['id']));
 end;
 
 end.
